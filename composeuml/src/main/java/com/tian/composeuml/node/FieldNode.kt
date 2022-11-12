@@ -1,10 +1,11 @@
-package com.compose.umlcreater.node
+package com.tian.composeuml.node
 
 class FieldNode(
-    private val name: String,
-    private val qualifier: Qualifier
+    var name: String,
+    var type: String,
+    var qualifier: Qualifier
 ) : ClassDiagramUmlNode() {
     override fun convertToUMLText(): String {
-        return qualifier.toString() + name
+        return "${qualifier.toName()} $type $name"
     }
 }

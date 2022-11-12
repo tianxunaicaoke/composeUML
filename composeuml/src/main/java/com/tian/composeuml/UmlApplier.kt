@@ -1,7 +1,7 @@
-package com.compose.umlcreater
+package com.tian.composeuml
 
 import androidx.compose.runtime.AbstractApplier
-import com.compose.umlcreater.node.ClassDiagramUmlNode
+import com.tian.composeuml.node.ClassDiagramUmlNode
 
 class UmlApplier(root: ClassDiagramUmlNode) : AbstractApplier<ClassDiagramUmlNode>(root) {
     override fun onClear() {

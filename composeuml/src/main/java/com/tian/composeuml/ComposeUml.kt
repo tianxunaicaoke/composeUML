@@ -1,10 +1,10 @@
-package com.compose.umlcreater
+package com.tian.composeuml
 
 import androidx.compose.runtime.BroadcastFrameClock
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Recomposer
-import com.compose.umlcreater.node.UmlClassDiagramNode
-import com.compose.umlcreater.node.setContent
+import com.tian.composeuml.node.UmlClassDiagramNode
+import com.tian.composeuml.node.setContent
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.CoroutineStart
 import kotlinx.coroutines.Job

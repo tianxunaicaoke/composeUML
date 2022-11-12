@@ -1,7 +1,13 @@
-package com.compose.umlcreater.node
+package com.tian.composeuml.node
 
-class UmlClassDiagramNode: ClassDiagramUmlNode() {
+import android.util.Log
+
+class UmlClassDiagramNode : ClassDiagramUmlNode() {
     override fun convertToUMLText(): String {
-        TODO("Not yet implemented")
+        val umlString = children.joinToString {
+            it.convertToUMLText()
+        }
+        Log.e("David", umlString)
+        return umlString
     }
 }

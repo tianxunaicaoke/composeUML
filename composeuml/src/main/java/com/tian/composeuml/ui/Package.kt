@@ -1,9 +1,9 @@
-package com.compose.umlcreater.ui
+package com.tian.composeuml.ui
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.ComposeNode
-import com.compose.umlcreater.UmlApplier
-import com.compose.umlcreater.node.PackageNode
+import com.tian.composeuml.UmlApplier
+import com.tian.composeuml.node.PackageNode
 
 @Composable
 fun Package(name: String, content: @Composable () -> Unit) {

@@ -1,9 +1,9 @@
-package com.compose.umlcreater.node
+package com.tian.composeuml.node
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Composition
 import androidx.compose.runtime.CompositionContext
-import com.compose.umlcreater.UmlApplier
+import com.tian.composeuml.UmlApplier
 
 abstract class ClassDiagramUmlNode : UmlNode {
     val children = mutableListOf<ClassDiagramUmlNode>()

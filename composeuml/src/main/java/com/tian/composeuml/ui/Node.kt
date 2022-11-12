@@ -1,4 +1,4 @@
-package com.compose.umlcreater.ui
+package com.tian.composeuml.ui
 
 import androidx.compose.runtime.Composable
 //TODO add later

@@ -1,4 +1,4 @@
-package com.compose.umlcreater.node
+package com.tian.composeuml.node
 
 interface UmlNode {
     fun convertToUMLText(): String

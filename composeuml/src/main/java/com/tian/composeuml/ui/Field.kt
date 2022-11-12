@@ -1,21 +1,25 @@
-package com.compose.umlcreater.ui
+package com.tian.composeuml.ui
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.ComposeNode
-import com.compose.umlcreater.UmlApplier
-import com.compose.umlcreater.node.MethodNode
-import com.compose.umlcreater.node.Qualifier
+import com.tian.composeuml.UmlApplier
+import com.tian.composeuml.node.FieldNode
+import com.tian.composeuml.node.Qualifier
 
 @Composable
 fun Field(
     name: String,
+    type: String,
     qualifier: Qualifier
 ) {
-    ComposeNode<MethodNode, UmlApplier>(
-        factory = { MethodNode(name, qualifier) },
+    ComposeNode<FieldNode, UmlApplier>(
+        factory = { FieldNode(name, type, qualifier) },
         update = {
             set(name) {
                 this.name = it
+            }
+            set(type) {
+                this.type = it
             }
             set(qualifier) {
                 this.qualifier = it

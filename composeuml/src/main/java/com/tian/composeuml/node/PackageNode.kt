@@ -1,4 +1,4 @@
-package com.compose.umlcreater.node
+package com.tian.composeuml.node
 
 class PackageNode(
     var name: String
@@ -7,8 +7,8 @@ class PackageNode(
     override fun convertToUMLText(): String {
         return children.joinToString(
             separator = "\n",
-            prefix = "package \"${name}\" {",
-            postfix = "}"
+            prefix = "package \"${name}\" {\n",
+            postfix = "\n}"
         ) {
             it.convertToUMLText()
         }

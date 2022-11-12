@@ -1,4 +1,4 @@
-package com.compose.umlcreater
+package com.tian.composeuml
 
 import androidx.compose.runtime.snapshots.Snapshot
 import java.util.concurrent.atomic.AtomicBoolean
