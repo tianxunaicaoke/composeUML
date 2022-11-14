@@ -9,6 +9,6 @@ interface UmlFileGenerator<T : UmlNode> {
 
 class ClassFileGenerator : UmlFileGenerator<ClassDiagramUmlNode> {
     override fun generate(node: ClassDiagramUmlNode): String {
-       return node.convertToUMLText()
+        return node.layout()
     }
 }

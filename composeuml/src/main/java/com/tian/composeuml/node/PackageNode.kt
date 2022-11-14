@@ -4,13 +4,13 @@ class PackageNode(
     var name: String
 ) : ClassDiagramUmlNode() {
 
-    override fun convertToUMLText(): String {
+    override fun layout(): String {
         return children.joinToString(
             separator = "\n",
             prefix = "package \"${name}\" {\n",
             postfix = "\n}"
         ) {
-            it.convertToUMLText()
+            it.layout()
         }
     }
 }

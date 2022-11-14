@@ -5,6 +5,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Recomposer
 import com.tian.composeuml.node.UmlClassDiagramNode
 import com.tian.composeuml.node.setContent
+import com.tian.composeuml.uml.ClassFileGenerator
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.CoroutineStart
 import kotlinx.coroutines.Job
@@ -13,11 +14,12 @@ import kotlinx.coroutines.launch
 
 fun runComposeUml(
     scope: CoroutineScope,
+    printLayout: (String) -> Unit,
     content: @Composable () -> Unit
 ) = scope.launch {
     val frameClock = BroadcastFrameClock()
     val effectCoroutineContext = Job(coroutineContext[Job]) + frameClock
-    val root = UmlClassDiagramNode()
+    val root = UmlClassDiagramNode(ClassFileGenerator())
     launch {
         SnapshotManager.ensureStarted()
     }
@@ -34,7 +36,7 @@ fun runComposeUml(
             refreshRate = 1000L,
             timeNanos = { System.nanoTime() },
             frameCallBack = {
-                root.convertToUMLText()
+                printLayout(root.render())
             }
         )
     }

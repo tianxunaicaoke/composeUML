@@ -33,8 +33,9 @@ class FirstFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        runComposeUml(lifecycleScope) {
+        runComposeUml(lifecycleScope, printLayout = {
+            binding.textviewFirst.text = it
+        }) {
             val shouldShowMyThought = remember {
                 mutableStateOf(false)
             }

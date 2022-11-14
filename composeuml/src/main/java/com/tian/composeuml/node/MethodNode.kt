@@ -4,7 +4,7 @@ class MethodNode(
     var name: String,
     var qualifier: Qualifier
 ) : ClassDiagramUmlNode() {
-    override fun convertToUMLText(): String {
+    override fun layout(): String {
         return "${qualifier.toName()} $name()"
     }
 }
